@@ -1,33 +1,40 @@
 {
-	"name": "react-scrolla",
-	"version": "0.1.0",
-	"description": "My module",
-	"license": "MIT",
-	"repository": "chentsulin/react-scrolla",
+  "name": "react-scrolla",
+  "version": "0.1.0",
+  "description": "My module",
+  "license": "MIT",
+  "repository": "chentsulin/react-scrolla",
   "scripts": {
-    "test": "mocha",
-    "test-travis": "node node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --reporter dot"
+    "test": "mocha"
   },
-	"author": {
-		"name": "C.T. Lin",
-		"email": "chentsulin@gmail.com",
-		"url": "github.com/chentsulin/react-scrolla"
-	},
-	"engines": {
-		"node": ">=0.10.0"
-	},
-	"scripts": {
-		"test": "mocha"
-	},
-	"files": [
-		"index.js"
-	],
-	"keywords": [
-		""
-	],
-	"dependencies": {},
-	"devDependencies": {
+  "author": {
+    "name": "C.T. Lin",
+    "email": "chentsulin@gmail.com",
+    "url": "github.com/chentsulin/react-scrolla"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {
+    "invariant": "^2.1.0",
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "babel": "^5.4.7",
+    "babel-core": "^5.4.7",
+    "babel-eslint": "^3.1.11",
+    "babel-loader": "^5.1.3",
+    "eslint": "^0.22.1",
+    "eslint-plugin-react": "^2.5.0",
     "istanbul": "^0.3.14",
-		"mocha": "*"
-	}
+    "mocha": "*",
+    "node-libs-browser": "^0.5.2",
+    "webpack": "^1.9.10"
+  }
 }
