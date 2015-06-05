@@ -1,10 +1,5 @@
-# 0.1.0 (2015/x/x)
+# 0.1.0 (2015/6/5)
 
 #### Features
 
-- **A:**
-- **B:**
-
-#### Bug Fixed
-
-- **C:**
+- **Percentage Infinite Scroll**
