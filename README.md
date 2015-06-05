@@ -8,7 +8,7 @@
 > WIP
 
 
-<!-- > My module
+> React Infinite Scroll Component
 
 
 ## Install
@@ -21,33 +21,42 @@ $ npm install react-scrolla
 ## Usage
 
 ```js
-var reactScrolla = require('react-scrolla');
+var ReactScrolla = require('react-scrolla');
 
-reactScrolla('test');
+<ReactScrolla
+  percentage={85}
+  onPercentage={this.handleScrollToPercentage}
+>
+  {items}
+</ReactScrolla>
 //=>
 ```
 
 
 ## API
 
-### reactScrolla(input, [options])
+#### props
 
-#### input
+##### percentage
 
-*Required*
-Type: `string`
+Type: `number`
+Default: `90`
 
-Lorem ipsum.
+Which percentage when scroll over will trigger `onPercentage`.
 
-#### options
+##### onPercentage
 
-##### foo
+Type: `function`
+
+How to fetch more items.
+
+##### isLoading
 
 Type: `boolean`
 Default: `false`
 
-Lorem ipsum.
- -->
+`onPercentage` will not be triggered when `isLoading` is true.
+
 
 ## License
 

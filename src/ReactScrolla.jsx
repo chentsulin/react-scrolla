@@ -8,6 +8,7 @@ export default class ReactScrolla extends React.Component {
   constructor(props) {
     super(props)
     this.state = {}
+    this.handleScroll = this.handleScroll.bind(this)
   }
 
 
@@ -49,6 +50,7 @@ ReactScrolla.propTypes = {
 }
 
 ReactScrolla.defaultProps = {
-  isLoading: false
+  isLoading: false,
+  percentage: 90
 }
 
