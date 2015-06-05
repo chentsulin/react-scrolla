@@ -20,10 +20,12 @@ export default class ReactScrolla extends React.Component {
 
     var { scrollTop, scrollHeight, clientHeight } = container
 
-    var percentNow = (scrollTop / (scrollHeight - clientHeight)) * 100
+    if (percentage && onPercentage) {
+      var percentNow = (scrollTop / (scrollHeight - clientHeight)) * 100
 
-    if (onPercentage && (percentNow > percentage)) {
-      onPercentage()
+      if (percentNow > percentage) {
+        onPercentage()
+      }
     }
   }
 
@@ -41,10 +43,12 @@ export default class ReactScrolla extends React.Component {
 }
 
 ReactScrolla.propTypes = {
-
+  isLoading: React.PropTypes.bool,
+  percentage: React.PropTypes.number,
+  onPercentage: React.PropTypes.func
 }
 
 ReactScrolla.defaultProps = {
-
+  isLoading: false
 }
 
