@@ -5,6 +5,7 @@
   "license": "MIT",
   "repository": "chentsulin/react-scrolla",
   "scripts": {
+    "build": "babel src --out-dir lib",
     "test": "mocha"
   },
   "author": {

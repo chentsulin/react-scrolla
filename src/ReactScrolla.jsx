@@ -20,7 +20,7 @@ export default class ReactScrolla extends React.Component {
 
     var { scrollTop, scrollHeight, clientHeight } = container
 
-    var percentNow = (scrollTop / (scrollHeight - clientHeight) * 100
+    var percentNow = (scrollTop / (scrollHeight - clientHeight)) * 100
 
     if (onPercentage && (percentNow > percentage)) {
       onPercentage()
