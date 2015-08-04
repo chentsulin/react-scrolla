@@ -1,27 +1,28 @@
-var path = require('path')
-var webpack = require('webpack')
+var path = require('path');
+var webpack = require('webpack');
+
 
 module.exports = {
   devtool: 'eval',
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
-    './index'
+    './index',
   ],
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/dist/'
+    publicPath: '/dist/',
   },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
   ],
   resolve: {
-    extensions: [ '', '.js', '.jsx' ],
+    extensions: [ '', '.js' ],
     alias: {
-      'react-scrolla': path.resolve(__dirname, '../src/ReactScrolla')
-    }
+      'react-scrolla': path.resolve(__dirname, '../src/ReactScrolla'),
+    },
   },
   module: {
     loaders: [{
@@ -29,8 +30,8 @@ module.exports = {
       loaders: [ 'react-hot', 'babel' ],
       include: [
         __dirname,
-        path.resolve(__dirname, '../src')
-      ]
-    }]
-  }
-}
+        path.resolve(__dirname, '../src'),
+      ],
+    }],
+  },
+};

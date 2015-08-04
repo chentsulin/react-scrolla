@@ -1,5 +1,6 @@
-import React from 'react'
-import App from './app/App'
+import React from 'react';
+import App from './app/App';
+
 
 React.render(
   <App />,
