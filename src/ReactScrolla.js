@@ -7,7 +7,7 @@ class ReactScrolla extends Component {
     isLoading: PropTypes.bool,
     percentage: PropTypes.number,
     onPercentage: PropTypes.func,
-    children: React.PropTypes.element,
+    children: PropTypes.node,
   };
 
   static defaultProps = {
