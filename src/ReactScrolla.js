@@ -54,4 +54,3 @@ class ReactScrolla extends Component {
 
 
 export default ReactScrolla;
-

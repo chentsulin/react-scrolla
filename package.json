@@ -10,7 +10,7 @@
     "lint": "eslint src",
     "prepublish": "npm run clean && npm run build",
     "start": "cd examples && node server.js",
-    "test": "mocha"
+    "test": "scripts/test"
   },
   "author": {
     "name": "C.T. Lin",
@@ -33,8 +33,10 @@
     "percentage"
   ],
   "dependencies": {
+    "chai": "^3.2.0",
     "invariant": "^2.1.0",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "sinon": "^1.15.4"
   },
   "devDependencies": {
     "babel": "^5.4.7",
@@ -46,8 +48,10 @@
     "eslint-config-airbnb": "0.0.7",
     "eslint-plugin-react": "^2.5.0",
     "istanbul": "^0.3.14",
+    "jsdom": "^6.0.1",
     "lodash": "^3.9.3",
     "mocha": "*",
+    "mocha-jsdom": "^1.0.0",
     "node-libs-browser": "^0.5.2",
     "react-hot-loader": "^1.2.7",
     "rimraf": "^2.3.4",
