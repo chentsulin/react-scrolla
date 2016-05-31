@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-
+import ReactDom from 'react-dom';
 
 class ReactScrolla extends Component {
 
@@ -21,24 +21,12 @@ class ReactScrolla extends Component {
     this.handleScroll = this.handleScroll.bind(this);
   }
 
-  render() {
-    return (
-      <div
-        onScroll={this.handleScroll}
-        ref="scrollContainer"
-        {...this.props}
-      >
-        {this.props.children}
-      </div>
-    );
-  }
-
   handleScroll() {
     const { isLoading, percentage, onPercentage } = this.props;
 
     if (isLoading) return;
 
-    const container = React.findDOMNode(this.refs.scrollContainer);
+    const container = ReactDom.findDOMNode(this.refs.scrollContainer);
 
     const { scrollTop, scrollHeight, clientHeight } = container;
 
@@ -49,6 +37,18 @@ class ReactScrolla extends Component {
         onPercentage();
       }
     }
+  }
+
+  render() {
+    return (
+      <div
+        onScroll={this.handleScroll}
+        ref="scrollContainer"
+        {...this.props}
+      >
+        {this.props.children}
+      </div>
+    );
   }
 }
 
