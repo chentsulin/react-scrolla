@@ -49,6 +49,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.20.2",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.5.0",
+    "babel-register": "^6.26.0",
     "envify": "^3.4.0",
     "eslint": "^2.11.1",
     "eslint-config-airbnb": "^9.0.1",
