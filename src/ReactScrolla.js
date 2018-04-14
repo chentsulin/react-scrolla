@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import ReactDom from 'react-dom';
 
 class ReactScrolla extends Component {
 
@@ -13,7 +12,7 @@ class ReactScrolla extends Component {
   static defaultProps = {
     isLoading: false,
     percentage: 90,
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -26,9 +25,7 @@ class ReactScrolla extends Component {
 
     if (isLoading) return;
 
-    const container = ReactDom.findDOMNode(this.refs.scrollContainer);
-
-    const { scrollTop, scrollHeight, clientHeight } = container;
+    const { scrollTop, scrollHeight, clientHeight } = this.container;
 
     if (percentage && onPercentage) {
       const percentNow = (scrollTop / (scrollHeight - clientHeight)) * 100;
@@ -49,7 +46,9 @@ class ReactScrolla extends Component {
     return (
       <div
         onScroll={this.handleScroll}
-        ref="scrollContainer"
+        ref={(container) => {
+          this.container = container;
+        }}
         {...copyProps}
       >
         {this.props.children}
