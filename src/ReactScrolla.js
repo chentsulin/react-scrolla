@@ -37,13 +37,19 @@ class ReactScrolla extends Component {
   }
 
   render() {
+    const copyProps = { ...this.props };
+    delete copyProps.isLoading;
+    delete copyProps.percentage;
+    delete copyProps.onPercentage;
+    delete copyProps.children;
+
     return (
       <div
         onScroll={this.handleScroll}
         ref={(container) => {
           this.container = container;
         }}
-        {...this.props}
+        {...copyProps}
       >
         {this.props.children}
       </div>
