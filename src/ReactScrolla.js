@@ -1,7 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class ReactScrolla extends Component {
-
   static propTypes = {
     isLoading: PropTypes.bool,
     percentage: PropTypes.number,
@@ -28,7 +28,7 @@ class ReactScrolla extends Component {
     const { scrollTop, scrollHeight, clientHeight } = this.container;
 
     if (percentage && onPercentage) {
-      const percentNow = (scrollTop / (scrollHeight - clientHeight)) * 100;
+      const percentNow = scrollTop / (scrollHeight - clientHeight) * 100;
 
       if (percentNow > percentage) {
         onPercentage();
@@ -46,7 +46,7 @@ class ReactScrolla extends Component {
     return (
       <div
         onScroll={this.handleScroll}
-        ref={(container) => {
+        ref={container => {
           this.container = container;
         }}
         {...copyProps}
@@ -56,6 +56,5 @@ class ReactScrolla extends Component {
     );
   }
 }
-
 
 export default ReactScrolla;

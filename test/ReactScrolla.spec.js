@@ -1,13 +1,12 @@
-import React, { addons } from 'react/addons';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import TestUtils from 'react-dom/test-utils';
 import { expect } from 'chai';
 import { spy } from 'sinon';
 import ReactScrolla from '../';
 import jsdom from 'mocha-jsdom';
 
-
-const { TestUtils } = addons;
-
-describe('ReactScrolla', function() {
+describe('ReactScrolla', function () {
   this.timeout(60000);
 
   jsdom();
@@ -20,7 +19,7 @@ describe('ReactScrolla', function() {
       </ReactScrolla>
     );
 
-    const rootDomNode = React.findDOMNode(rootNode);
+    const rootDomNode = ReactDOM.findDOMNode(rootNode);
     rootDomNode.scrollHeight = 4400;
     rootDomNode.clientHeight = 400;
     rootDomNode.scrollTop = 3601;
@@ -32,10 +31,5 @@ describe('ReactScrolla', function() {
     expect(callback.called).to.be.true;
   });
 
-
-  xit('should throw when percentage >= 100', () => {
-
-  });
-
+  xit('should throw when percentage >= 100', () => {});
 });
-
