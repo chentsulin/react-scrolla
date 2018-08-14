@@ -1,4 +1,4 @@
-# 0.3.1 (2018/4/14)
+# 0.3.1 (2018/8/15)
 
 - [fix] use callback to get ref
 - [fix] avoid prop warning
